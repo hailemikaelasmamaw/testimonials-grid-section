@@ -14,83 +14,124 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
-}
-
-.grid-container {
+  }
+  
+  .grid-container {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.testimonial {
+  }
+  
+  /* Testimonial Card Styles */
+  .testimonial {
     padding: 1.5rem;
     border-radius: 8px;
     color: hsl(0, 0%, 100%);
     position: relative;
-}
-
-.testimonial img {
+  }
+  
+  .testimonial img {
     border-radius: 50%;
     width: 32px;
     height: 32px;
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
-}
-
-.testimonial h2 {
+  }
+  
+  .testimonial h2 {
     margin-left: 50px;
     font-size: 1rem;
     font-weight: 600;
-}
-
-.verified {
+  }
+  
+  .verified {
     margin-left: 50px;
     font-size: 0.8rem;
     color: hsla(0, 0%, 100%, 0.5);
-}
-
-.testimonial h3 {
+  }
+  
+  .testimonial h3 {
     margin-top: 1rem;
     font-size: 1.1rem;
     font-weight: 600;
-}
-
-.quote {
+  }
+  
+  .quote {
     margin-top: 1rem;
     opacity: 0.7;
     font-weight: 500;
-}
-
-.testimonial-purple {
+  }
+  
+  /* Individual Testimonial Colors */
+  .testimonial-purple {
     background-color: hsl(263, 55%, 52%);
-}
-
-.testimonial-dark-gray {
+  }
+  
+  .testimonial-dark-gray {
     background-color: hsl(217, 19%, 35%);
-}
-
-.testimonial-black {
+  }
+  
+  .testimonial-black {
     background-color: hsl(219, 29%, 14%);
-}
-
-.testimonial-white {
+  }
+  
+  .testimonial-white {
     background-color: hsl(0, 0%, 100%);
     color: hsl(217, 19%, 35%);
-}
-
-.testimonial-white .verified {
+  }
+  
+  .testimonial-white .verified {
     color: hsla(217, 19%, 35%, 0.5);
-}
-
-.kira {
+  }
+  
+  /* Kira Whittle's Card Specifics */
+  .kira {
     grid-column: span 2;
-}
-
-@media (max-width: 768px) {
-    .kira {
-        grid-column: span 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
-}
+  
+    .kira {
+      grid-column: span 1;
+    }
+  
+    .testimonial img {
+      position: static;
+      margin-bottom: 0.5rem;
+    }
+  
+    .testimonial h2,
+    .verified {
+      margin-left: 0;
+      text-align: left;
+    }
+  
+    .testimonial {
+      text-align: left;
+      padding: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+      padding: 0.5rem;
+    }
+  
+    .testimonial {
+      padding: 1rem;
+    }
+  
+    .testimonial h3 {
+      font-size: 1rem;
+    }
+  }
+  
